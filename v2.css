@@ -1,0 +1,293 @@
+
+body {
+    background-color: #f4f5f6;
+    font-family: sans-serif;
+    height: 90vh;
+    overflow: hidden;
+}
+
+h6 {
+ font-size: 6rem;
+ position: absolute;
+ width: 100%;
+ text-align: center;
+ animation: textAnim 4s;
+ color: #f4f5f6;
+}
+
+.cta {
+    background-color: #127e80;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 21px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 30%;
+    width: fit-content;
+    left: 43%;
+    cursor: pointer;
+    
+}
+
+.cta:hover {
+    background-color: #3c8284;
+    /* background-color: ; */
+}
+
+h6 span {
+    color: #1aa7aa;
+}
+
+.pattern-wrap {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1e7177;
+}
+
+.pattern {
+    width: 120px;
+    animation: fade 2s;
+    transition: 1s ease-in-out;
+}
+
+.pattern1 {
+ height: fit-content;
+}
+
+.pattern.bottom {
+    animation: fade2 2s;
+    position: absolute;
+    width: 120px;
+    bottom: 0;
+    right: 0;
+}
+
+.card {
+    display: none;
+  background-color: #269899;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 8px;
+  flex-direction: column;
+  height: 100%;
+  animation: cardAnim 2s forwards;
+}
+
+.card-header {
+ color: #fff;
+ text-align: center;
+ font-size: 2rem;
+ margin-bottom: 10px;
+}
+
+.card-footer {
+    color: #127e80;
+    text-align: center;
+    background-color: #f4f5f6;
+    margin-top: 10px;
+    padding: 8px 0;
+}
+
+/* STYLE PETA */
+
+.card .map {
+    background: #E9F3FC;
+    flex: 1 1 0;
+    overflow: auto;
+    border-radius: 6px;
+}
+
+.card svg  {
+    display: block;
+    height: 100% !important;
+    width: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.map path {
+    
+    stroke: #000;
+    stroke-width: 4px;
+}
+
+/* 
+rect {
+    /* fill: #D9D9D9;
+    fill: #D9D9D9;
+    stroke: black;
+
+} */
+
+/* hover */
+.bangunan :hover {
+    fill: #950a0a;
+    stroke: black;
+    stroke-width: 3px;
+    transition: fill 0.4s;
+    cursor: pointer;
+}
+
+.jalan :hover {
+    stroke-width: 6px;
+}
+
+
+
+
+/* edit style modal */
+
+dialog {
+   
+    padding: 0;
+    position: relative;
+    background: #FFFF;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .4); */
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    animation: cardAnim 0.5s forwards;
+}
+
+/* dialog  */
+dialog #modalUtama {
+    padding: 0;
+    position: relative;
+    background: #FFFF;
+    padding: 0;
+}
+
+dialog #modalUtama .isiModal {
+    /* padding: 0; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* judul  */
+dialog #modalUtama .isiModal #header {
+    /* height:; */
+    /* overflow: hidden; */
+    background-color: #2A9C9C;
+}
+
+dialog #modalUtama .isiModal #header h2 {
+    color: white;
+    text-align: center;
+    /* padding-left: 32px; */
+    font-weight: normal;
+    
+}
+
+/* //bagian gambar */
+
+/* gambar  */
+dialog #modalUtama .isiModal .gambarModal {
+    /* overflow: hidden; */
+    height: 250px;
+    width: 420px;
+    padding: 10px;
+    background-color: #ececec;
+    
+}
+
+dialog #modalUtama .isiModal .gambarModal img {
+    border-radius: 4px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  /* deskripsi  */
+p {
+    font-size: 15px;
+    color: #1F5150;
+    margin-left: 10px;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tutupModal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid #27AE60; */
+    padding: 8px 10px;
+    font-size: 18px;
+    /* border-top: 2px solid black;   */
+}
+
+.tutupModal > button {
+    cursor: pointer;
+    color: white;
+    background: #1F5150;
+    border: none;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* 
+dialog > .gambarModal > img  {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    object-position: center;
+} */
+
+@keyframes fade {
+ 0% {
+  opacity: 0;
+  transform: translateY(-40%);
+ }
+
+ 100%{
+    opacity: 1;
+    transform: translateY(0);
+ }
+}
+
+@keyframes fade2 {
+ 0% {
+  opacity: 0;
+  transform: translateY(40%);
+ }
+
+ 100%{
+    opacity: 1;
+    transform: translateY(0);
+ }
+}
+
+@keyframes cardAnim {
+   0% {
+    transform: scale(0.5);
+   } 
+
+   100% {
+    transform: scale(1);
+   }
+}
+
+@keyframes textAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
